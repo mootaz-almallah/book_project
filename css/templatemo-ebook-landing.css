@@ -10,44 +10,43 @@ https://templatemo.com/tm-588-ebook-landing
   CUSTOM PROPERTIES ( VARIABLES )             
 -----------------------------------------*/
 :root {
-  --white-color:                  #ffffff;
-  --primary-color:                #E76F51;
-  --secondary-color:              #E9C46A;
-  --section-bg-color:             #f0f8ff;
-  --custom-btn-bg-color:          #F4A261;
-  --custom-btn-bg-hover-color:    #E76F51;
-  --dark-color:                   #000000;
-  --p-color:                      #717275;
-  --link-hover-color:             #E76F51;
+  --white-color: #ffffff;
+  --primary-color: #e76f51;
+  --secondary-color: #e9c46a;
+  --section-bg-color: #f0f8ff;
+  --custom-btn-bg-color: #f4a261;
+  --custom-btn-bg-hover-color: #e76f51;
+  --dark-color: #000000;
+  --p-color: #717275;
+  --link-hover-color: #e76f51;
 
-  --body-font-family:             'Unbounded', sans-serif;
+  --body-font-family: "Unbounded", sans-serif;
 
-  --h1-font-size:                 42px;
-  --h2-font-size:                 36px;
-  --h3-font-size:                 28px;
-  --h4-font-size:                 24px;
-  --h5-font-size:                 22px;
-  --h6-font-size:                 20px;
-  --p-font-size:                  16px;
-  --menu-font-size:               12px;
-  --btn-font-size:                14px;
-  --copyright-font-size:          14px;
+  --h1-font-size: 42px;
+  --h2-font-size: 36px;
+  --h3-font-size: 28px;
+  --h4-font-size: 24px;
+  --h5-font-size: 22px;
+  --h6-font-size: 20px;
+  --p-font-size: 16px;
+  --menu-font-size: 12px;
+  --btn-font-size: 14px;
+  --copyright-font-size: 14px;
 
-  --border-radius-large:          100px;
-  --border-radius-medium:         20px;
-  --border-radius-small:          10px;
+  --border-radius-large: 100px;
+  --border-radius-medium: 20px;
+  --border-radius-small: 10px;
 
-  --font-weight-light:            300;
-  --font-weight-normal:           400;
-  --font-weight-semibold:         600;
-  --font-weight-bold:             700;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
 }
 
 body {
   background-color: var(--white-color);
-  font-family: var(--body-font-family); 
+  font-family: var(--body-font-family);
 }
-
 
 /*---------------------------------------
   TYPOGRAPHY               
@@ -109,7 +108,7 @@ ul li {
   font-weight: var(--font-weight-normal);
 }
 
-a, 
+a,
 button {
   touch-action: manipulation;
   transition: all 0.3s;
@@ -130,7 +129,6 @@ strong {
   font-weight: var(--font-weight-bold);
 }
 
-
 /*---------------------------------------
   SECTION               
 -----------------------------------------*/
@@ -143,7 +141,6 @@ strong {
   background-color: var(--secondary-color);
   color: var(--white-color);
 }
-
 
 /*---------------------------------------
   AVATAR IMAGE               
@@ -169,7 +166,10 @@ strong {
   left: -30px;
 }
 
-.avatar-image-left + .avatar-image-left + .avatar-image-left + .avatar-image-left {
+.avatar-image-left
+  + .avatar-image-left
+  + .avatar-image-left
+  + .avatar-image-left {
   left: -40px;
 }
 
@@ -188,7 +188,6 @@ strong {
   font-size: var(--h3-font-size);
   margin-right: 10px;
 }
-
 
 /*---------------------------------------
   CUSTOM LINK              
@@ -212,7 +211,7 @@ strong {
 }
 
 .link::before {
-  content: '';
+  content: "";
 }
 
 .link--kale::before {
@@ -227,39 +226,38 @@ strong {
 }
 
 @keyframes lineUp {
-    0% {
-      transform-origin: 50% 100%;
-      transform: scale3d(1, 0.045, 1);
-    }
+  0% {
+    transform-origin: 50% 100%;
+    transform: scale3d(1, 0.045, 1);
+  }
 
-    50% {
-      transform-origin: 50% 100%;
-      transform: scale3d(1, 1, 1);
-    }
+  50% {
+    transform-origin: 50% 100%;
+    transform: scale3d(1, 1, 1);
+  }
 
-    51% {
-      transform-origin: 50% 0%;
-      transform: scale3d(1, 1, 1);
-    }
+  51% {
+    transform-origin: 50% 0%;
+    transform: scale3d(1, 1, 1);
+  }
 
-    100% {
-      transform-origin: 50% 0%;
-      transform: scale3d(1, 0.045, 1);
-    }
+  100% {
+    transform-origin: 50% 0%;
+    transform: scale3d(1, 0.045, 1);
+  }
 }
 
 .link--kale::after {
-    content: '';
-    transition: opacity 0.3s;
-    opacity: 0;
-    transition-delay: 0s;
+  content: "";
+  transition: opacity 0.3s;
+  opacity: 0;
+  transition-delay: 0s;
 }
 
 .link--kale:hover::after {
-    opacity: 1;
-    transition-delay: 0.3s;
+  opacity: 1;
+  transition-delay: 0.3s;
 }
-
 
 /*---------------------------------------
   CUSTOM BUTTON               
@@ -303,13 +301,12 @@ strong {
   position: relative;
   z-index: 1;
   overflow: hidden;
-  -webkit-backface-visibility: hidden;
   -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
 }
 
 .btn-naira::before {
-  content: '';
+  content: "";
   position: absolute;
   left: -50%;
   width: 200%;
@@ -327,7 +324,6 @@ strong {
 
 .btn-naira > span {
   display: block;
-  vertical-align: middle;
 }
 
 .btn-naira .btn-icon {
@@ -400,7 +396,6 @@ strong {
   -webkit-transform: translate3d(0, 100%, 0);
   transform: translate3d(0, 100%, 0);
 }
-
 
 /*---------------------------------------
   NAVIGATION              
@@ -477,7 +472,7 @@ strong {
   padding-bottom: 15px;
 }
 
-.navbar-nav .nav-link.active, 
+.navbar-nav .nav-link.active,
 .navbar-nav .nav-link:hover {
   color: var(--primary-color);
 }
@@ -505,7 +500,8 @@ strong {
 .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
   transition: top 300ms 50ms ease, -webkit-transform 300ms 350ms ease;
   transition: top 300ms 50ms ease, transform 300ms 350ms ease;
-  transition: top 300ms 50ms ease, transform 300ms 350ms ease, -webkit-transform 300ms 350ms ease;
+  transition: top 300ms 50ms ease, transform 300ms 350ms ease,
+    -webkit-transform 300ms 350ms ease;
   top: 0;
 }
 
@@ -530,14 +526,15 @@ strong {
 .navbar-toggler .navbar-toggler-icon:after {
   transition: top 300ms 350ms ease, -webkit-transform 300ms 50ms ease;
   transition: top 300ms 350ms ease, transform 300ms 50ms ease;
-  transition: top 300ms 350ms ease, transform 300ms 50ms ease, -webkit-transform 300ms 50ms ease;
+  transition: top 300ms 350ms ease, transform 300ms 50ms ease,
+    -webkit-transform 300ms 50ms ease;
   position: absolute;
   right: 0;
   left: 0;
   background: var(--white-color);
   width: 30px;
   height: 2px;
-  content: '';
+  content: "";
 }
 
 .navbar-toggler .navbar-toggler-icon::before {
@@ -548,12 +545,11 @@ strong {
   top: 8px;
 }
 
-
 /*---------------------------------------
   HERO        
 -----------------------------------------*/
 .hero-section {
-  background-image: url('../images/businessman-sitting-by-table-cafe.jpg');
+  background-image: url("../images/businessman-sitting-by-table-cafe.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -593,7 +589,6 @@ strong {
   }
 }
 
-
 /*---------------------------------------
   FEATURED              
 -----------------------------------------*/
@@ -617,12 +612,11 @@ strong {
   pointer-events: none;
 }
 
-
 /*---------------------------------------
   CUSTOM BLOCK              
 -----------------------------------------*/
 .custom-block {
-  background-image: url('../images/businessman-sitting-by-table-cafe.jpg');
+  background-image: url("../images/businessman-sitting-by-table-cafe.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -682,7 +676,6 @@ strong {
   line-height: 1.8;
 }
 
-
 /*---------------------------------------
   THE BOOK SECTION            
 -----------------------------------------*/
@@ -710,8 +703,8 @@ strong {
 }
 
 .nav-pills .nav-link:hover,
-.nav-pills .nav-link.active, 
-.nav-pills .show>.nav-link {
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
   background: var(--primary-color);
   color: var(--white-color);
 }
@@ -761,40 +754,15 @@ strong {
   display: block;
 }
 
-
-/*---------------------------------------
-  AUTHOR SECTION            
------------------------------------------*/
-.author-section {
-  background-image: url('../images/circle-scatter-haikei.png');
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: left bottom;
-  position: relative;
-  margin-top: 50px;
-}
-
-.author-image {
-  border: 10px solid var(--secondary-color);
-  border-radius: 100%;
-  display: block;
-  margin: auto;
-  width: 350px;
-  height: 350px;
-  object-fit: cover;
-}
-
-
 /*---------------------------------------
   DIVIDER SECTION               
 -----------------------------------------*/
 .divider-section {
-  background-image: url('../images/wave-haikei.png');
+  background-image: url("../images/wave-haikei.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
-
 
 /*---------------------------------------
   CONTACT               
@@ -835,7 +803,6 @@ strong {
   font-size: var(--copyright-font-size);
 }
 
-
 /*---------------------------------------
   EBOOK DOWNLOAD FORM               
 -----------------------------------------*/
@@ -845,7 +812,6 @@ strong {
   z-index: 2;
   padding: 50px;
 }
-
 
 /*---------------------------------------
   CUSTOM FORM               
@@ -889,7 +855,17 @@ strong {
   transition: opacity 0.3s ease;
 }
 
-.input-group:not(.has-validation)>.dropdown-toggle:nth-last-child(n+3), .input-group:not(.has-validation)>.form-floating:not(:last-child)>.form-control, .input-group:not(.has-validation)>.form-floating:not(:last-child)>.form-select, .input-group:not(.has-validation)>:not(:last-child):not(.dropdown-toggle):not(.dropdown-menu):not(.form-floating) {
+.input-group:not(.has-validation) > .dropdown-toggle:nth-last-child(n + 3),
+.input-group:not(.has-validation)
+  > .form-floating:not(:last-child)
+  > .form-control,
+.input-group:not(.has-validation)
+  > .form-floating:not(:last-child)
+  > .form-select,
+.input-group:not(.has-validation)
+  > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu):not(
+    .form-floating
+  ) {
   border-radius: var(--border-radius-large);
 }
 
@@ -909,7 +885,6 @@ strong {
   background: var(--custom-btn-bg-hover-color);
   border-color: transparent;
 }
-
 
 /*---------------------------------------
   SOCIAL ICON               
@@ -944,7 +919,6 @@ strong {
   color: var(--white-color);
 }
 
-
 /*---------------------------------------
   RESPONSIVE STYLES               
 -----------------------------------------*/
@@ -977,7 +951,7 @@ strong {
     padding-top: 50px;
     padding-bottom: 50px;
   }
-  
+
   .navbar {
     background-color: rgba(0, 0, 0, 0.65);
   }
@@ -1044,10 +1018,9 @@ strong {
     top: 5px;
   }
 
-  .btn-naira > span, 
+  .btn-naira > span,
   .btn-naira .btn-icon {
     font-size: 12px;
     padding: 5px 15px;
   }
 }
-
