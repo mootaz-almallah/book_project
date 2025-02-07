@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Favorites</title>
+    <link rel="stylesheet" href="./fav.css" />
+    <script src="https://kit.fontawesome.com/YOUR_FONT_AWESOME_KEY.js" crossorigin="anonymous"></script>
+      <!-- CSS FILES -->
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;600;700&display=swap"
+        rel="stylesheet"
+      />
+      <link href="../css/bootstrap.min.css" rel="stylesheet" />
+      <link href="../css/bootstrap-icons.css" rel="stylesheet" />
+      <link href="../css/templatemo-ebook-landing.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg" style="background-color:rgb(19, 19, 19)">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <i class="navbar-brand-icon bi-book me-2"></i>
+            <span>RiwayaHub</span>
+          </a>
+
+          <div class="d-lg-none ms-auto me-3">
+            <a
+            href="../lgo_in/log.html"
+              class="btn custom-btn custom-border-btn btn-naira btn-inverted"
+            >
+              <i class="btn-icon bi-cloud-download"></i>
+              <span h> log in</span
+              ><!-- duplicated another one below for mobile -->
+            </a>
+          </div>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-lg-auto me-lg-4">
+              <li class="nav-item">
+                <a class="nav-link click-scroll" href="../index.html">Home</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link click-scroll" href="../about.html">About us</a
+                >
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link click-scroll" href="#">MY Love</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link click-scroll" href="../contact.html">Contact</a>
+              </li>
+            </ul>
+
+            <div class="d-none d-lg-block">
+              <a
+                href=""
+                class="btn custom-btn custom-border-btn btn-naira btn-inverted"
+              >
+                <i class="btn-icon bi-cloud-download"></i>
+                <span>Log in</span
+                ><!-- duplicated above one for mobile -->
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    <h1>My Favorite Books</h1>
+    <div id="favoritesContainer" class="book-cards"></div>
+    
+  </body>
+</html>
+
+    <script>
+   document.addEventListener("DOMContentLoaded", () => {
+    let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+    const container = document.getElementById("favoritesContainer");
+
+    if (favorites.length === 0) {
+        container.innerHTML = "<p class='no-favorites'>No favorite books added yet.</p>";
+        return;
+    }
+
+    favorites.forEach((book) => {
+        const card = document.createElement("div");
+        card.className = "book-card";
+        card.setAttribute("data-id", book.id);
+
+        const img = document.createElement("img");
+        img.src = book.imgSrc;
+        img.alt = "Book Cover";
+
+        const infoDiv = document.createElement("div");
+        infoDiv.className = "book-info";
+
+        const title = document.createElement("h2");
+        title.innerHTML = `<a href="${book.link}" target="_blank">${book.title}</a>`;
+
+        const button = document.createElement("button");
+        button.className = "remove-favorite";
+        button.innerHTML = `<i class="fa-solid fa-trash"></i> Remove`;
+        button.onclick = function () {
+            removeFromFavorites(book.id);
+        };
+
+        infoDiv.appendChild(title);
+        infoDiv.appendChild(button);
+        card.appendChild(img);
+        card.appendChild(infoDiv);
+        container.appendChild(card);
+    });
+});
+
+function removeFromFavorites(bookId) {
+    let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+    favorites = favorites.filter((book) => book.id !== bookId);
+    localStorage.setItem("favorites", JSON.stringify(favorites));
+    location.reload();
+}
+
+    </script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/click-scroll.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./fav.js"></script>
+
+  </body>
+</html>
